@@ -1,0 +1,8 @@
+A <- c(1,2,3,3,5,1)
+B <- c(6,7,8,9,8,8)
+Value <- c(9,5,2,1,2,2)
+DATA <- data.frame(A,B,Value)
+AList <- c(1,3)
+BList <- c(6,8)
+KEYS <- data.frame(A = AList, B = BList)
+merge(DATA, KEYS)
