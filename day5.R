@@ -1,7 +1,9 @@
+## chart 12.18 
 candidate_set <- read.csv("data/tianchi_mobile_recommendation_predict.4.2.csv")
 ui <- read.csv("data/tianchi_mobile_recommend_train_user.csv")
+## user item interaction
 candidate_record <- merge(candidate_set, ui)
-sum(candidate_record$behavior_type == 4)
+## sum(candidate_record$behavior_type == 4)
 candidate_record.repeat.buy <- candidate_record[which(candidate_record$behavior_type == 4),]
 
 repeat.buy.item <- data.frame(user_id = candidate_record.repeat.buy$user_id, item_id = candidate_record.repeat.buy$item_id)
